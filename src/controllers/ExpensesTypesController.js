@@ -8,9 +8,9 @@ module.exports = {
     },
 
     async create(req, res){
-        const { type, goal} = req.body;
+        const { expensetype, goal} = req.body;
 
-        if(!type || !goal){
+        if(!expensetype || !goal){
             return res.status(400).json({"error": "fields required"})
         }
 
