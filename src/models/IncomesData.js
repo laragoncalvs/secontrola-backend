@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const IncomesDataSchema = new mongoose.Schema({
-    description: String,
+    name: String,
     income: Number,
-    date: Date
+    incomeDate: Date
 })
 
 module.exports = mongoose.model(

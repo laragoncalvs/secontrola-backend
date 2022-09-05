@@ -8,15 +8,15 @@ module.exports = {
     },
 
     async create(req, res){
-        const { type, goal} = req.body;
+        const { expenseType, goal} = req.body;
 
-        if(!type || !goal){
+        if(!expenseType || !goal){
             return res.status(400).json({"error": "fields required"})
         }
 
         const expenseCreated = await ExpensesTypes.create(
             {
-                type, goal
+                expenseType, goal
             }
         )
 

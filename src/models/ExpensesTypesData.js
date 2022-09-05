@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const ExpensesTypesDataSchema = new mongoose.Schema({
-    type: String,
+    expenseType: String,
     goal: Number
 })
 
